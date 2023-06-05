@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% extends "base.html" %}
+    {% block content %}
+
+        <main>
+        <div class="center_div">
+            <p style="font-size: 25px; color: black; font-weight: bold;">Välkommen till Simplic MC</p>
+            <br><br>
+            <p style="font-size: 18px; color: black; margin-top: -4%; margin-left: 25%; width: 50%">
+                Vi är ett MC helhetskoncept som levererar service och reparationer på samtliga MC modeller oavsett märke. Vi erbjuder även MC förmedling & försäljning där vi samarbetar med flera finans- & försäkringsbolag
+                Hos oss är du som kund inte bara ett nummer utan vi satsar mycket på att leverera en personlig service som ska vara både smidig och prisvärd.
+                Vi utför dessutom de flesta av våra tjänster på plats medan du väntar och har en egen kundhörna ”MC Hangout”!
+            </p>
+        </div>
+
+        {% load static %}
+
+        <div class="center_div">
+            <img class="img_center" src="{% static 'images/HD.jpg' %}" height="50%" width="50%">
+        </div>
+
+        <div>
+            <hr color="darkblue">
+        </div>
+
+        <div class="center_div">
+            <p style="font-size: 25px; color: black; font-weight: bold;">Dela upp din verkstadsnota!</p>
+            <br><br>
+            <p style="font-size: 18px; color: black; margin-top: -4%; margin-left: 25%; width: 50%">
+                Genom vårt samarbete med Klarna Bank kan vi erbjuda olika lösningar på fakturering och delbetalning av din verkstadsnota!
+            </p>
+        </div>
+
+        <div class="center_div">
+            <img class="img_center" src="{% static 'images/klarna.png' %}" height="50%" width="50%">
+        </div>
+
+        <div>
+            <hr color="darkblue">
+        </div>
+
+        <div class="center_div">
+            <p style="font-size: 25px; color: black; font-weight: bold;">Vinterförvara din MC hos oss!</p>
+            <br><br>
+            <p style="font-size: 18px; color: black; margin-top: -4%; margin-left: 25%; width: 50%">
+                Vi har marknadens mest prisvärda vinterförvaring för MC där en årsservice alltid ingår!
+            </p>
+        </div>
+
+        <div class="center_div">
+            <img class="img_center" src="{% static 'images/vinterfor.png' %}">
+        </div>
+
+        <div>
+            <hr color="darkblue">
+        </div>
+
+        <div class="center_div">
+            <p style="font-size: 25px; color: black; font-weight: bold;">Köp eller sälj din MC med oss!</p>
+            <br><br>
+            <p style="font-size: 18px; color: black; margin-top: -4%; margin-left: 25%; width: 50%">
+                Vi förmedlar din hoj! Kolla in vår Blocket butik. eller läs mer om MC förmedling här. <!-- add anchor link -->
+            </p>
+        </div>
+
+        <div class="center_div">
+            <img class="img_center" src="{% static 'images/blocket.png' %}">
+        </div>
+
+    </main>
+
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="center_div">Ange dina uppgifter</h2>
+<form method="post">
+  {% csrf_token %}
+  <div style="color: darkblue;">
+    {{ form.username.label_tag }} {{ form.username }} <br>
+    {{ form.password.label_tag }} {{ form.password }} <br>
+  </div>
+  <button class='button_clean_white' type="submit">Log In</button>
+</form>
+
+{% endblock %}

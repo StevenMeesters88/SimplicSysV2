@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'homepage' %}">{% translate 'Home' %}</a></div>{% endblock %}
+
+{% block content %}
+
+<br><br>
+
+<h3 class="center_div">Tack för ditt besök och varmt välkommen åter!</h3>
+
+<p class="center_div"><a href="{% url 'login' %}">{% translate 'Log in again' %}</a></p>
+
+{% endblock %}

@@ -1,0 +1,133 @@
+
+h1 {
+    color: black;
+}
+
+.center_div {
+    text-align: center;
+}
+
+.left_div {
+    text-align: left;
+}
+
+.right_div {
+    text-align: right;
+}
+
+.center_menu {
+    text-align: center;
+    background-color: darkblue;
+}
+
+.button_clean {
+    background-color: darkblue;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+}
+
+.button_clean:hover {
+    color: lightblue;
+}
+
+.button_clean_white {
+    background-color: white;
+    color: darkblue;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+}
+
+.button_clean_white:hover {
+    color: lightblue;
+}
+
+.right_div {
+    text-align: right;
+}
+
+form {
+    text-align: center;
+}
+
+.service_block {
+    text-align: center;
+}
+
+.h1_logo {
+    font-size: 50px;
+    text-align: center;
+}
+
+.h2_logo {
+    text-align: center;
+    margin-top: -3%;
+}
+
+.button_x {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.button_x:hover {
+    color: white;
+    background-color: black;
+}
+
+.service_button {
+    width: 40%;
+    height: 140px;
+    border-radius: 5px;
+}
+
+.service_button:hover {
+    background-color: white;
+}
+
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.info {
+  border-color: #2196F3;
+  color: dodgerblue
+}
+
+.info:hover {
+  background: #2196F3;
+  color: white;
+}
+
+.center_div_service {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.faq_header {
+    font-size: 20px;
+}
+
+.faq_text {
+    font-size: 15px;
+}
+
+.form_font {
+    color: darkblue;
+}
+
+service_text {
+    font-size: 50px;
+}

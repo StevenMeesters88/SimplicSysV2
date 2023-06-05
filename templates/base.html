@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+
+<body>
+
+    <header>
+
+        <h1 style="text-align: center; font-size: 50px;">SIMPLIC MC</h1>
+        <h2 style="text-align: center; margin-top: -3%;">Vi tar hand om din hoj!</h2>
+
+        <p class="h_line"></p>
+
+        <div class="center_menu">
+            <a href="{% url 'homepage' %}"><button class="button_clean">Hem</button></a>
+            <a href="{% url 'boka' %}"><button class="button_clean">Boka</button></a>
+            <a href="https://www.blocket.se/butik/simplicmc" target=”_blank”><button class="button_clean">Butik</button></a>
+            <a href="{% url 'om_oss' %}"><button class="button_clean">Om oss</button></a>
+            <a href="{% url 'kontakt' %}"><button class="button_clean">Kontakt</button></a>
+            <a href="{% url 'faq' %}"><button class="button_clean">FAQ</button></a>
+        </div>
+
+        {% if user.is_authenticated %}
+            <div class="center_div">
+                <a href="{% url 'minprofil' %}"><button class="button_clean_white">Min profil</button></a>
+                <a href="{% url 'logout' %}"><button class="button_clean_white">Logga ut</button></a>
+            </div>
+        {% else %}
+            <div class="center_div">
+                <a href="{% url 'skapakonto' %}"><button class="button_clean_white">Skapa konto</button></a>
+                <a href="{% url 'login' %}"><button class="button_clean_white">Logga in</button></a>
+            </div>
+        {% endif %}
+
+
+    </header>
+
+    <main>
+
+        {% block content %}
+        {% endblock content %}
+
+    </main>
+
+    <footer>
+        <hr color="darkblue">
+        <hr color="darkblue">
+
+        <div style="width: 100%;">
+            <div style="width: 50%; height: 100px; float: left; text-align: right;">
+                <p>Lodgatan 10 741 71 Knivsta <br>
+                E-post: info@simplicmc.se <br>
+                Telefon: 019-7777 002</p>
+            </div>
+            <div style="margin-left: 50%; height: 100px; text-align: left;">
+                <img src="{% static 'images/simpliclogo.png' %}" width="100px" height="100px">
+            </div>
+        </div>
+        <br>
+        <hr color="darkblue">
+        <hr color="darkblue">
+        <br><br>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% extends "base.html" %}
+    {% block content %}
+
+        <main class="center_div">
+        <div style="margin-left: 20%; margin-right: 20%;">
+            <br>
+            <p style="font-size: 18px;">Hej {{ first_name }}! Kul att du tittar förbi! <br><br>
+
+            Vi är en MC firma som riktar in sig på ett så kallat lågkostnadskoncept. Genom smarta arbetssätt och lösningar kan vi erbjuda servicar och reparationer upp till 3 gånger billigare än hos våra konkurrenter, givetvis med samma garanti. Vi servar 100-tals hojar varje säsong och arbetar med marknadsledande verktyg och diagnostik utrustning.
+            <br><br>
+            Vår verkstad är utrustad med allt som behövs för att kunna serva hojar av alla märken, vi kan läsa av “datorn” i alla typer av hojar, koda om nycklar och har självklart även specialverktygen som krävs för att kunna ta hand om hojar av alla märken.
+            <br><br>
+            Vi säkerställer branschkvalitet i våra tjänster och produkter och ger samma garantier som våra konkurrenter men helt enkelt till ett mycket lägre pris, då vi tycker att en service inte ska kosta massor. Vi erbjuder dessutom fasta priser på de flesta av våra tjänster! Alltså inga oväntade överraskningar eller små bokstäver!
+            <br><br>
+            Vår MC förmedling ligger i branschens framkant, där du som säljer genom oss får ut ett högre belopp än om du skulle sälja genom en av våra konkurrenter. Vi går igenom våra förmedlingsobjekt väldigt noga och servar alltid hojen innan leverans till köparen. Vi erbjuder även 1 års full garanti på de flesta hojar vi säljer.
+            <br><br>
+            Vi vill att vår verksamhet skall kännetecknas som smidig, prisvärd och transparent. Hos oss är du inte ett nummer utan vi lägger stor vikt på att erbjuda en personlig service.
+            <br><br>
+            Varmt välkomna till Simplic MC
+
+            </p>
+
+            <div class="center_div">
+                <a href="{% url 'boka' %}"><button class="button_clean_white">Boka</button></a>
+            </div>
+
+            <br><br>
+
+            {% load static %}
+            <img class="img_center" style="width: 50%; height: 50%;" src="{% static 'images/klassik_MC.jpg' %}">
+        </div>
+    </main>
+
+    {% endblock %}
+
+</body>
+</html>

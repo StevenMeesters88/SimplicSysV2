@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min Profil</title>
+</head>
+<body>
+
+    {% extends "base.html" %}
+    {% block content %}
+
+    <br><br>
+
+    <div class="center_div">
+        <h3>Registreringsnummer: <b>{{ user.username }}</b> </h3>
+        <p> Förnamn: <b>{{ user.first_name }}</b> <br>
+        Efternamn: <b>{{ user.last_name }}</b> <br>
+        Telefon: <b>TO BE FIXED</b> <br>
+        E-post: <b>{{ user.email }}</b> <br>
+        Medlem sedan: <b>{{ user.date_joined }}</b> <br>
+        Senast inloggad: <b>{{ user.last_login }}</b> </p> <br>
+    </div>
+    <h3 class="center_div">Mina servicar</h3>
+    <div class="center_div">
+        {% for service in mina_servicar %}
+            {{ service.service_type }} <br>
+            {{ service.booked_date }} <br>
+            Status {{ service.status }} <br>
+            {% if service.service_protocol_available == 1 %}
+        <a href="{{ service.service_protocol.url }}" download>Ladda ned service protokoll</a>
+            {% endif %}
+        <br><br>
+        {% empty %}
+            <p>Du har inga servicar än. <br>
+            <a href="{% url 'boka' %}">Boka här!</a> </p>
+        {% endfor %}
+    </div>
+
+    <br><br><br><br>
+
+    {% endblock %}
+
+</body>
+</html>

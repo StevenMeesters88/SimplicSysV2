@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TackMeddelande</title>
+</head>
+<body>
+
+    {% extends "base.html" %}
+    {% block content %}
+
+    {% if x == 0 %}
+      <h1 class="center_div">Tack för ditt meddelande {{ first_name }}!</h1>
+      <h3 class="center_div">Vi återkommer så fort vi kan!</h3>
+    {% elif x == 1 %}
+      <h1 class="center_div">Tack för ditt meddelande {{ first_name }}!</h1>
+      <h3 class="center_div">Vi återkommer så fort vi kan!</h3>
+    {% endif %}
+
+    <br>
+    {% load static %}
+    <div class="center_div">
+        <img class="img_center" style="width: 50%; height: 50%;" src="{% static 'images/klassik_MC.jpg' %}">
+    </div>
+    <br>
+
+    {% endblock %}
+
+</body>
+</html>

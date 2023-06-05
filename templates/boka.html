@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+    {% extends "base.html" %}
+    {% block content %}
+    {% load static %}
+
+    <br><br>
+
+    {% for service in data %}
+        <a href="{% url 'boka_two' service.service_name %}">
+        <div class="center_div_service">
+            <button class="service_button">
+                <div style="width: 100%;">
+                    <div style="width: 50%; height: 100px; float: left; text-align: right; margin-top: -4%; text-align: center;">
+                        <img style="border-radius: 30%;" src="{{ service.image.url }}" width="120px" height="120px" />                    </div>
+                    <div style="margin-left: 50%; height: 100px; text-align: left;">
+                        <p style="font-size: 20px; text-align: left;">{{ service.service_name }} {{ service.service_price }},- kr</p>
+                    </div>
+                </div>
+            </button>
+        </div></a>
+    {% empty %}
+        <h2>Det finns inga servicar att boka för tillfället</h2>
+    {% endfor %}
+
+    <br><br>
+
+    {% endblock %}
+
+</body>
+</html>

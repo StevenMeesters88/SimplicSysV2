@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BokaStepTwo</title>
+</head>
+<body>
+
+    {% extends "base.html" %}
+    {% block content %}
+
+    <h1 class="center_div">Fyll i dina uppgifter</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button class="button_x" type="submit">Boka</button>
+    </form>
+
+    {% endblock %}
+
+</body>
+</html>

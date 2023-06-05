@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+
+<body>
+
+    <header>
+
+        <h1 style="text-align: center; font-size: 50px;">SIMPLIC MC</h1>
+        <h2 style="text-align: center; margin-top: -3%;">Vi tar hand om din hoj!</h2>
+
+        <p class="h_line"></p>
+
+        <div class="center_div">
+            <a href="{% url 'homepage' %}"><button class="button_x">Hem</button></a>
+            <a href="{% url 'boka' %}"><button class="button_x">Boka</button></a>
+            <a href="http://www.blocket.se"><button class="button_x">Butik</button></a>
+            <a href="{% url 'om_oss' %}"><button class="button_x">Om oss</button></a>
+            <a href="{% url 'kontakt' %}"><button class="button_x">Kontakt</button></a>
+            <a href="{% url 'faq' %}"><button class="button_x">FAQ</button></a>
+        </div>
+
+        {% if user.is_authenticated %}
+            <div class="center_div">
+                <a href="{% url 'minprofil' %}"><button class="button_x">Min profil</button></a>
+                <a href="{% url 'logout' %}"><button class="button_x">Logga ut</button></a>
+            </div>
+        {% else %}
+            <div class="center_div">
+                <a href="{% url 'skapakonto' %}"><button class="button_x">Skapa konto</button></a>
+                <a href="{% url 'login' %}"><button class="button_x">Logga in</button></a>
+            </div>
+        {% endif %}
+
+
+    </header>
+
+    <main>
+
+        {% block content %}
+        {% endblock content %}
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

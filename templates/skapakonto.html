@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skapa konto</title>
+</head>
+<body>
+
+    {% extends "base.html" %}
+    {% block content %}
+
+    <br>
+
+    <h2 class="center_div">Fyll i din information för att skapa ett konto</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+        <div style="color: darkblue;">
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+        </div>
+        {% endfor %}
+        <button type="submit" class="button_clean_white">Skicka</button>
+    </form>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    {% endblock %}
+
+</body>
+</html>
