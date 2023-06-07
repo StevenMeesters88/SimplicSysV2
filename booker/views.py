@@ -79,7 +79,6 @@ def kontakt(request):
             form = forms.KontaktLoggedOut()
             return render(request, 'kontakt.html', context={'form': form})
 
-
     return render(request, 'kontakt.html')
 
 
@@ -126,6 +125,11 @@ def min_profil(request):
 
 def boka_two(request, service_name=None):
     service_name = get_object_or_404(models.ServiceTypeModel, service_name=service_name)
+
+    descriptionx = models.ServiceTypeModel.objects.filter(service_name=service_name)
+    description = list(descriptionx)
+    print(service_name)
+    print(description)
 
     if request.method == 'POST':
         if request.user.is_authenticated:       # fetch customer data
@@ -191,4 +195,4 @@ def boka_two(request, service_name=None):
         else:                                   # send empty form with all fields
             form = forms.BokaLoggedOut()
 
-    return render(request, 'boka_two.html', context={'form': form})
+    return render(request, 'boka_two.html', context={'form': form, 'service_name': service_name, 'description': description})

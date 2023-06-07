@@ -3,6 +3,10 @@ h1 {
     color: black;
 }
 
+.h_darkblue {
+    color: darkblue;
+}
+
 .center_div {
     text-align: center;
 }
