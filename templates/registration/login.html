@@ -7,10 +7,10 @@
 <form method="post">
   {% csrf_token %}
   <div style="color: darkblue;">
-    {{ form.username.label_tag }} {{ form.username }} <br>
-    {{ form.password.label_tag }} {{ form.password }} <br>
+    Användarnamn: {{ form.username }} <br>
+    Lösenord: {{ form.password }} <br>
   </div>
-  <button class='button_clean_white' type="submit">Log In</button>
+  <button class='button_clean_white' type="submit">Logga in</button>
 </form>
 
 {% endblock %}
