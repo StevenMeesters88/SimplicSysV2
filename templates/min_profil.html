@@ -24,7 +24,7 @@
     <div class="center_div">
         {% for service in mina_servicar %}
             {{ service.service_type }} <br>
-            {{ service.booked_date }} <br>
+            {{ service.service_date }} <br>
             Status {{ service.status }} <br>
             {% if service.service_protocol_available == 1 %}
         <a href="{{ service.service_protocol.url }}" download>Ladda ned service protokoll</a>

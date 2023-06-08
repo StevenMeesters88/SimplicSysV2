@@ -117,7 +117,7 @@ def min_profil(request):
     user = request.user
     print('username: ', user.username)
 
-    mina_servicar = models.ServiceModel.objects.filter(regnr=f'{user.username}')
+    mina_servicar = models.ServiceModel.objects.filter(regnr=f'{user.username}').order_by('-service_date')
     # mina_servicar = list(mina_servicar)
 
     return render(request, 'min_profil.html', context={'user': user, 'mina_servicar': mina_servicar})
