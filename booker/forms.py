@@ -11,8 +11,8 @@ class NewUserForm(forms.Form):
 
 
 class BokaLoggedIn(forms.Form):
-    service_date = forms.DateTimeField(widget=forms.DateTimeInput)
-    notes = forms.CharField(widget=forms.Textarea)
+    service_date = forms.DateTimeField(widget=forms.DateTimeInput, label='Service Date')
+    notes = forms.CharField(widget=forms.Textarea, label='Notering')
 
 
 class BokaLoggedOut(forms.Form):
@@ -21,8 +21,8 @@ class BokaLoggedOut(forms.Form):
     last_name = forms.CharField(max_length=255, label='Efternamn')
     email = forms.EmailField(max_length=255, label='E-post')
     phone = forms.CharField(max_length=20, label='Telefon')
-    service_date = forms.DateTimeField(widget=forms.DateTimeInput)
-    notes = forms.CharField(widget=forms.Textarea)
+    service_date = forms.DateTimeField(widget=forms.DateTimeInput, label='Service Date')
+    notes = forms.CharField(widget=forms.Textarea, label='Notering')
 
 
 class KontaktLoggedIn(forms.Form):
